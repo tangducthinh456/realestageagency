@@ -1,4 +1,4 @@
-<?php 
+<?php
     session_start();
 ?>
 <html lang="en">
@@ -40,6 +40,14 @@
                     $_SESSION["permision"] = 1;
                     $_SESSION["userName"] = $row["userName"];
                     $_SESSION["name"] = $row["name"];
+                    $_SESSION["password"] = $row['password'];
+                    $_SESSION["sex"] = $row["sex"];
+                    $_SESSION["phone"] = $row["phone"];
+                    $_SESSION["email"] = $row["email"];
+                    $_SESSION["address"] = $row["address"];
+                    $_SESSION["address"] = $row["address"];
+                    $_SESSION["birthday"] = $row["birthday"];
+                    $_SESSION["url_avt"] = $row["url_avt"];
                     header('Location: ../app/home.php');
                 } else {
                     $query = "SELECT * from Customers where userName='$userName' and password='$password';";
@@ -49,6 +57,14 @@
                         $_SESSION["permision"] = 0;
                         $_SESSION["userName"] = $row["userName"];
                         $_SESSION["name"] = $row["name"];
+                        $_SESSION["password"] = $row['password'];
+                        $_SESSION["sex"] = $row["sex"];
+                        $_SESSION["phone"] = $row["phone"];
+                        $_SESSION["email"] = $row["email"];
+                        $_SESSION["address"] = $row["address"];
+                        $_SESSION["address"] = $row["address"];
+                        $_SESSION["birthday"] = $row["birthday"];
+                        $_SESSION["url_avt"] = $row["url_avt"];
                         header('Location: ../app/home.php');
                     } 
                     else {
